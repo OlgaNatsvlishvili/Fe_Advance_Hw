@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script>
+      const symbolUpperRow = 'qwertyuiop[]\\';
+
+      const symbolMiddleRow = 'asdfghjkl;\'';
+
+      const symbolLowerRow = 'zxcvbnm,./';
+
+      const firstLine = 12;
+
+      const secondLine = 9;
+
+      const thirdLine = 9;
+
+      	console.log(symbolUpperRow.charAt(0));
+
+		console.log(symbolUpperRow.charAt(12));
+
+      	console.log(symbolMiddleRow.charAt(0));
+
+		console.log(symbolMiddleRow.charAt(10));
+
+      	console.log(symbolLowerRow.charAt(0));
+
+		console.log(symbolLowerRow.charAt(9));
+
+
+		const symbolOne = symbolUpperRow.indexOf('[');
+
+			console.log(symbolOne);
+
+		const symbolTwo = symbolUpperRow.indexOf(']')
+
+			console.log(symbolTwo);
+
+		console.log(`symbolUpperRow = ${symbolUpperRow.charAt(0)} ${symbolUpperRow.charAt(12)}; ` + 
+			`symbolMiddleRow = ${symbolMiddleRow.charAt(0)} ${symbolMiddleRow.charAt(10)}; ` + 
+			`symbolLowerRow = ${symbolUpperRow.charAt(0)} ${symbolLowerRow.charAt(9)}; ` + `symbolOne = ${symbolUpperRow.indexOf('[')}; ` + `symbolTwo = ${symbolUpperRow.indexOf(']')};`)
+
+
+    </script>
+</body>
+</html>
