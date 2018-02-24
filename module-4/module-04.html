@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>module04</title>
+</head>
+<body>
+	
+	<script>
+
+		function addKeyboardLayout(alphabet){
+			const firstLine = alphabet.substr(0, alphabet.indexOf("a"));
+			const secondLine = alphabet.substr(alphabet.indexOf("a"), alphabet.indexOf("z") - alphabet.indexOf("a"));
+			const thirdLine = alphabet.substr(alphabet.indexOf("z"));
+
+			const firstArr = firstLine.split('');
+			const secondArr = secondLine.split('');
+			const thirdArr = thirdLine.split('');
+
+			const keyboard = [firstArr, secondArr, thirdArr];
+			return keyboard;
+		}
+		console.log(addKeyboardLayout('qwertyuiop[]asdfghjkl;\'zxcvbnm.,/'));
+
+		function getRandCharInRow(row){
+			let keyboard1 = addKeyboardLayout('qwertyuiop[]asdfghjkl;\'zxcvbnm.,/');
+			let firstArr1 = keyboard1[0];
+			let secondArr1 = keyboard1[1];
+			let thirdArr1 = keyboard1[2];
+
+			row = +prompt('Введите число от 0 до 2', '');
+
+			if (row === keyboard1.indexOf(firstArr1)){
+				let a = Math.floor(Math.random() * firstArr1.length);
+				alert(firstArr1[a]);
+			} else if (row === keyboard1.indexOf(secondArr1)){
+				let b = Math.floor(Math.random() * secondArr1.length);
+				alert(secondArr1[b]);
+			} else if (row === keyboard1.indexOf(thirdArr1)){
+				let c = Math.floor(Math.random() * thirdArr1.length);
+				alert(thirdArr1[c]);
+			} else {
+				alert('Error');
+			}
+		}
+		getRandCharInRow();
+
+		function getRandCharInAlph(){
+
+			let keyboard2 = addKeyboardLayout('qwertyuiop[]asdfghjkl;\'zxcvbnm.,/');
+
+			for (i=0; i <= keyboard2.length; i++){
+				for (j=0; j<keyboard2[i].length; j++){
+					let a = Math.floor(Math.random() * keyboard2.length);
+					let b = Math.floor(Math.random() * keyboard2[i].length);
+					return keyboard2[a][b];
+				}
+			}
+		}
+
+		getRandCharInAlph ();
+
+	</script>
+</body>
+</html>
